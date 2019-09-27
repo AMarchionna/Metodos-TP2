@@ -1,0 +1,15 @@
+/home2/clinux01/Downloads/build/CMakeFiles/install/strip.dir
+/home2/clinux01/Downloads/build/CMakeFiles/install/local.dir
+/home2/clinux01/Downloads/build/CMakeFiles/install.dir
+/home2/clinux01/Downloads/build/CMakeFiles/tp2_pybind.dir
+/home2/clinux01/Downloads/build/CMakeFiles/sentiment.dir
+/home2/clinux01/Downloads/build/CMakeFiles/tp2.dir
+/home2/clinux01/Downloads/build/CMakeFiles/edit_cache.dir
+/home2/clinux01/Downloads/build/CMakeFiles/rebuild_cache.dir
+/home2/clinux01/Downloads/build/CMakeFiles/list_install_components.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/install/strip.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/install.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/install/local.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/edit_cache.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/rebuild_cache.dir
+/home2/clinux01/Downloads/build/pybind11/CMakeFiles/list_install_components.dir

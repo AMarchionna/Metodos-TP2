@@ -8,12 +8,33 @@ using namespace std;
 
 KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 {
+	neighbors = n_neighbors;
 }
 
 void KNNClassifier::fit(SparseMatrix X, Matrix y)
 {
+
+	X_mine = X;
+	y_mine = y;
+
 }
 
+Vector KNNClassifier::distance_to_row(Vector v){
+
+	auto a = Vector(1);
+
+	return a;
+
+}
+
+double KNNClassifier::predict_row(Vector v) {
+
+	double a = 0;
+
+
+
+	return a;
+}
 
 Vector KNNClassifier::predict(SparseMatrix X)
 {
@@ -22,7 +43,8 @@ Vector KNNClassifier::predict(SparseMatrix X)
 
     for (unsigned k = 0; k < X.rows(); ++k)
     {
-        ret(k) = 0;
+    	auto v = Vector(X.row(k));
+        ret(k) = predict_row(v);
     }
 
     return ret;
