@@ -20,12 +20,20 @@ int main(int argc, char** argv){
   X.insert(1, 0) = 50;
 
   auto v = Vector(X.row(0));
-
+ v = v.transpose();
 
 
   cout << X << endl;
   cout << v << endl;
-  X.colwise() += v;
+
+    X = X.transpose();
+	for(int i = 0; i< X.rows(); ++i) {
+	  X.col(i) = X.col(i) + v;// + v;
+	} 
+
+	X = X.transpose();
+	
+	cout << X << endl;
   // Resta columnas
   //cout << X.colwise()+=v << endl;
   //cout << v << endl;

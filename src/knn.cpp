@@ -21,9 +21,10 @@ void KNNClassifier::fit(SparseMatrix X, Matrix y)
 
 Vector KNNClassifier::distance_to_row(Vector v){
 
-	auto a = Vector(1);
+	/*auto V = SparseMatrix(rows(X_mine), cols(X_mine));
+	for(int i=0; i<)
 
-	return a;
+	return a;*/
 
 }
 
