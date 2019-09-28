@@ -21,9 +21,14 @@ int main(int argc, char** argv){
 
   auto v = Vector(X.row(0));
  v = v.transpose();
+ v(3) = 8;
 
+ auto V = Vector(X.cols());
 
-  cout << X << endl;
+ for(int i=0; i<X.cols(); i++) {
+  V(i) = (X.row(i)-v.transpose()).norm();
+ }
+ /* cout << X << endl;
   cout << v << endl;
 
     X = X.transpose();
@@ -31,12 +36,17 @@ int main(int argc, char** argv){
 	  X.col(i) = X.col(i) + v;// + v;
 	} 
 
-	X = X.transpose();
+	X = X.transpose();*/ 
 	
-	cout << X << endl;
-  // Resta columnas
-  //cout << X.colwise()+=v << endl;
-  //cout << v << endl;
+	
+
+  cout << v.norm() << endl << endl << endl;
+
+  cout << X.row(0) - v << endl << endl << endl;
+
+  cout << v << endl << endl;
+
+  cout << X << endl;
 
   return 0;
 }

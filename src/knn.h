@@ -11,7 +11,7 @@ public:
 
     Vector distance_to_row(Vector v);
 
-    double predict_row(Vector v);
+    int predict_row(Vector v);
 
     Vector predict(SparseMatrix X);
 private:
