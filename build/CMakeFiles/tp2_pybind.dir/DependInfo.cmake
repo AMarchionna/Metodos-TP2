@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home2/clinux01/Downloads/src/eigen.cpp" "/home2/clinux01/Downloads/build/CMakeFiles/tp2_pybind.dir/src/eigen.cpp.o"
-  "/home2/clinux01/Downloads/src/knn.cpp" "/home2/clinux01/Downloads/build/CMakeFiles/tp2_pybind.dir/src/knn.cpp.o"
-  "/home2/clinux01/Downloads/src/main_pybind.cpp" "/home2/clinux01/Downloads/build/CMakeFiles/tp2_pybind.dir/src/main_pybind.cpp.o"
-  "/home2/clinux01/Downloads/src/pca.cpp" "/home2/clinux01/Downloads/build/CMakeFiles/tp2_pybind.dir/src/pca.cpp.o"
+  "/home2/clinux01/Desktop/git/Metodos-TP2/src/eigen.cpp" "/home2/clinux01/Desktop/git/Metodos-TP2/build/CMakeFiles/tp2_pybind.dir/src/eigen.cpp.o"
+  "/home2/clinux01/Desktop/git/Metodos-TP2/src/knn.cpp" "/home2/clinux01/Desktop/git/Metodos-TP2/build/CMakeFiles/tp2_pybind.dir/src/knn.cpp.o"
+  "/home2/clinux01/Desktop/git/Metodos-TP2/src/main_pybind.cpp" "/home2/clinux01/Desktop/git/Metodos-TP2/build/CMakeFiles/tp2_pybind.dir/src/main_pybind.cpp.o"
+  "/home2/clinux01/Desktop/git/Metodos-TP2/src/pca.cpp" "/home2/clinux01/Desktop/git/Metodos-TP2/build/CMakeFiles/tp2_pybind.dir/src/pca.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

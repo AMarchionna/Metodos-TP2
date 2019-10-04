@@ -1,1 +1,1 @@
-/home2/clinux01/Downloads/notebooks/sentiment.so
+/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so

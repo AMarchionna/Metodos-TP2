@@ -1,8 +1,8 @@
-# Install script for directory: /home2/clinux01/Downloads
+# Install script for directory: /home2/clinux01/Desktop/git/Metodos-TP2
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home2/clinux01/Downloads")
+  set(CMAKE_INSTALL_PREFIX "/home2/clinux01/Desktop/git/Metodos-TP2")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,32 +38,32 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so")
+  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so"
+         FILE "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home2/clinux01/Downloads/notebooks/sentiment.so")
+   "/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home2/clinux01/Downloads/notebooks" TYPE MODULE FILES "/home2/clinux01/Downloads/build/sentiment.so")
-  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so")
+file(INSTALL DESTINATION "/home2/clinux01/Desktop/git/Metodos-TP2/notebooks" TYPE MODULE FILES "/home2/clinux01/Desktop/git/Metodos-TP2/build/sentiment.so")
+  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home2/clinux01/Downloads/notebooks/sentiment.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so")
     endif()
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home2/clinux01/Downloads/build/pybind11/cmake_install.cmake")
+  include("/home2/clinux01/Desktop/git/Metodos-TP2/build/pybind11/cmake_install.cmake")
 
 endif()
 
@@ -75,5 +75,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home2/clinux01/Downloads/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home2/clinux01/Desktop/git/Metodos-TP2/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

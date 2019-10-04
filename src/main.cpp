@@ -14,39 +14,39 @@ int main(int argc, char** argv){
 
   std::cout << "#Funcionalidades" << std::endl;
 
-  SparseMatrix X(4,4); 
+  //~ SparseMatrix X(4,4); 
   
-  X.insert(0,1) = 2;
-  X.insert(1, 0) = 50;
+  //~ X.insert(0,1) = 2;
+  //~ X.insert(1, 0) = 50;
 
-  auto v = Vector(X.row(0));
- v = v.transpose();
- v(3) = 8;
+  //~ auto v = Vector(X.row(0));
+ //~ v = v.transpose();
+ //~ v(3) = 8;
 
- auto V = Vector(X.cols());
+ //~ auto V = Vector(X.cols());
 
- for(int i=0; i<X.cols(); i++) {
-  V(i) = (X.row(i)-v.transpose()).norm();
- }
- /* cout << X << endl;
-  cout << v << endl;
+ //~ for(int i=0; i<X.cols(); i++) {
+  //~ V(i) = (X.row(i)-v.transpose()).norm();
+ //~ }
+ //~ /* cout << X << endl;
+  //~ cout << v << endl;
 
-    X = X.transpose();
-	for(int i = 0; i< X.rows(); ++i) {
-	  X.col(i) = X.col(i) + v;// + v;
-	} 
+    //~ X = X.transpose();
+	//~ for(int i = 0; i< X.rows(); ++i) {
+	  //~ X.col(i) = X.col(i) + v;// + v;
+	//~ } 
 
-	X = X.transpose();*/ 
+	//~ X = X.transpose();*/ 
 	
 	
 
-  cout << v.norm() << endl << endl << endl;
+  //~ cout << v.norm() << endl << endl << endl;
 
-  cout << X.row(0) - v << endl << endl << endl;
+  //~ cout << X.row(0) - v << endl << endl << endl;
 
-  cout << v << endl << endl;
+  //~ cout << v << endl << endl;
 
-  cout << X << endl;
+  //~ cout << X << endl;
 
   return 0;
 }

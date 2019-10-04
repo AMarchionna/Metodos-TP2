@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O3 -O3 -DNDEBUG   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home2/clinux01/Downloads/eigen -I/home2/clinux01/Downloads/pybind11/include 
+CXX_INCLUDES = -I/home2/clinux01/Desktop/git/Metodos-TP2/eigen -I/home2/clinux01/Desktop/git/Metodos-TP2/pybind11/include 
 
