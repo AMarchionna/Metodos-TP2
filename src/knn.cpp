@@ -68,14 +68,14 @@ Vector KNNClassifier::predict(SparseMatrix X)
     cout << "KKKKK" << endl;
 
     // Creamos vector columna a devolver
-    auto ret = Vector(X.cols());
+    auto ret = Vector(X.rows());
 
     ret(0) = 15;
 
-    for (unsigned k = 0; k < X.cols(); ++k)
+    for (unsigned k = 0; k < X.rows(); ++k)
     {
     	auto v = Vector(X.row(k));
-        ret(k) = 1;//(predict_row(v) == 1 ? "pos" : "neg");
+        ret(k) = predict_row(v);
     }
     return ret;
 }
