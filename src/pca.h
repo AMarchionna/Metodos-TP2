@@ -9,4 +9,8 @@ public:
 
     Eigen::MatrixXd transform(SparseMatrix X);
 private:
+
+	SparseMatrix X_mine;
+
+	int components;
 };

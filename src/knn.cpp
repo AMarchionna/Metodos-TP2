@@ -15,10 +15,8 @@ KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 
 void KNNClassifier::fit(SparseMatrix X, Matrix y)
 {
-
 	X_mine = X;
 	y_mine = y;
-
 }
 
 Vector KNNClassifier::distance_to_row(Vector v){
