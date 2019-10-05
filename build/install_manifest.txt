@@ -1,1 +1,1 @@
-/home2/clinux01/Desktop/git/Metodos-TP2/notebooks/sentiment.so
+/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so

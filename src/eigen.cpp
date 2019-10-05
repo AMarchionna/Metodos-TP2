@@ -6,9 +6,9 @@
 
 using namespace std;
 
-pair<double, VectorXd> power_iteration(const MatrixXd& X, unsigned num_iter, double eps)
+pair<double, VectorA> power_iteration(const SparseMatrixA& X, unsigned num_iter, double eps)
 {
-    VectorXd b = VectorXd::Random(X.cols());
+    VectorA b = VectorA::Random(X.cols());
     double eigenvalue;
     /***********************
      * COMPLETAR CODIGO
@@ -25,21 +25,24 @@ pair<double, VectorXd> power_iteration(const MatrixXd& X, unsigned num_iter, dou
     return make_pair(eigenvalue, b / b.norm());
 }
 
-pair<VectorXd, MatrixXd> get_first_eigenvalues(const MatrixXd& X, unsigned num, unsigned num_iter, double epsilon)
+pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsigned num, unsigned num_iter, double epsilon)
 {
-    MatrixXd A(X);
-    VectorXd eigvalues(num);
-    MatrixXd eigvectors(A.rows(), num);
+    SparseMatrixA A(X);
+    VectorA eigvalues(num);
+    SparseMatrixA eigvectors(A.rows(), num);
 	
     /***********************
      * COMPLETAR CODIGO
      **********************/
     
     for(int i = 0; i < (int)num; i++){
-		pair<double, VectorXd> eig = power_iteration(A, num_iter, epsilon);
+		pair<double, VectorA> eig = power_iteration(A, num_iter, epsilon);
 		eigvalues[i] = eig.first;
-		eigvectors.col(i) = eig.second;
+		for (int k = 0; k < eig.second.rows(); i++)
+		{
+			eigvectors.insert(i,k) = eig.second[k];
+		}
+		
 	}
-    
-    return {eigvalues, eigvectors};
+    return make_pair(eigvalues, eigvectors);
 }

@@ -1,8 +1,6 @@
 #pragma once
 #include "types.h"
 
-using namespace Eigen;
-
 /*
 Calcula el autovalor (y autovector correspondiente) de módulo máximo
 
@@ -24,8 +22,8 @@ Devuelve:
 pair<double, Vector> donde el primer valor es el autovalor
 y el segundo el autovector asociado
 */
-std::pair<double, VectorXd>
-    power_iteration(const MatrixXd& mat, unsigned num_iter=5000, double eps=1e-16);
+std::pair<double, VectorA>
+    power_iteration(const SparseMatrixA& mat, unsigned num_iter=5000, double eps=1e-16);
 
 
 /*
@@ -53,5 +51,5 @@ pair<Vector, Matrix> donde:
     - El segundo elemento es una matriz cuyas columnas son los autovectores
       correspondientes
 */
-std::pair<Eigen::VectorXd, MatrixXd>
-    get_first_eigenvalues(const MatrixXd& mat, unsigned num, unsigned num_iter=5000, double epsilon=1e-16);
+std::pair<VectorA, SparseMatrixA >
+    get_first_eigenvalues(const SparseMatrixA& mat, unsigned num, unsigned num_iter=5000, double epsilon=1e-16);

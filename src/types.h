@@ -6,6 +6,6 @@
 using Eigen::MatrixXd;
 
 typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> Matrix;
-typedef Eigen::SparseMatrix<double> SparseMatrix;
+typedef Eigen::SparseMatrix<double> SparseMatrixA;
 
-typedef Eigen::VectorXd Vector;
+typedef Eigen::VectorXd VectorA;

@@ -1,18 +1,17 @@
 #pragma once
 #include "types.h"
 
-using namespace Eigen;
 
 class PCA {
 public:
     PCA(unsigned int n_components);
 
-    void fit(MatrixXd X);
+    void fit(SparseMatrixA X);
 
-    Eigen::MatrixXd transform(MatrixXd X);
+    SparseMatrixA transform(SparseMatrixA X);
 private:
 
-	MatrixXd X_mine;
+	SparseMatrixA X_mine;
 
 	int components;
 };
