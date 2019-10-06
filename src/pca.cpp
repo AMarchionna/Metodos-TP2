@@ -30,9 +30,9 @@ SparseMatrixA PCA::transform(SparseMatrixA X){
 	prom = prom / n ;
 	SparseMatrixA A = X - prom;
 	A = A / sqrt(n-1) ; //Ver bien despues
-	SparseMatrixA M = X.transpose() * X;
-	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, M.cols(), const_iter, eps);
-	SparseMatrixA T = v.second ;
+	SparseMatrixA M = A.transpose() * A;
+	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
+	SparseMatrixA V = v.second ;
 	SparseMatrixA V = T.leftCols(components);
 	X = X.leftCols(components);
 	return V.transpose() * X; 
