@@ -38,11 +38,12 @@ pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsi
     for(int i = 0; i < (int)num; i++){
 		pair<double, VectorA> eig = power_iteration(A, num_iter, epsilon);
 		eigvalues[i] = eig.first;
+		cout <<"ENTRE Y ME DIO " << eig.first << endl;
 		for (int k = 0; k < eig.second.rows(); i++)
 		{
 			eigvectors.insert(i,k) = eig.second[k];
 		}
-		
+		A = A - eig.first * (eig.second * eig.second.transpose()) / (eig.second.transpose() * eig.second);
 	}
     return make_pair(eigvalues, eigvectors);
 }

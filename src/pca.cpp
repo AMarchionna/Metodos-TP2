@@ -20,6 +20,7 @@ void PCA::fit(SparseMatrixA X)
 
 
 SparseMatrixA PCA::transform(SparseMatrixA X){
+	cout << "ENTRE1" << endl;
 	int n = X.cols();
 	VectorA prom = X.row(0);
 	prom = prom.setZero(X.cols());
@@ -27,13 +28,14 @@ SparseMatrixA PCA::transform(SparseMatrixA X){
 	{
 		prom = prom + X.row(i) ;
 	}
+	cout << "ENTRE2" << endl;
 	prom = prom / n ;
 	SparseMatrixA A = X - prom;
 	A = A / sqrt(n-1) ; //Ver bien despues
 	SparseMatrixA M = A.transpose() * A;
+	cout << "ENTRE3" << endl;
 	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
 	SparseMatrixA V = v.second ;
-	SparseMatrixA V = T.leftCols(components);
 	X = X.leftCols(components);
 	return V.transpose() * X; 
 }
