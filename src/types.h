@@ -5,7 +5,7 @@
 
 using Eigen::MatrixXd;
 
-typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> Matrix;
+typedef Eigen::Matrix<double, Eigen::Dynamic, Eigen::Dynamic, Eigen::RowMajor> MatrixA;
 typedef Eigen::SparseMatrix<double> SparseMatrixA;
 
 typedef Eigen::VectorXd VectorA;

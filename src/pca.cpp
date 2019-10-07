@@ -12,14 +12,13 @@ PCA::PCA(unsigned int n_components)
 {
     components = n_components ;
 }
-
-void PCA::fit(SparseMatrixA X)
+void PCA::fit(MatrixA X)
 {
 	X_mine = X;
 }
 
 
-SparseMatrixA PCA::transform(SparseMatrixA X){
+MatrixA PCA::transform(MatrixA X){
 	cout << "ENTRE1" << endl;
 	int n = X.cols();
 	VectorA prom = X.row(0);
@@ -30,12 +29,12 @@ SparseMatrixA PCA::transform(SparseMatrixA X){
 	}
 	cout << "ENTRE2" << endl;
 	prom = prom / n ;
-	SparseMatrixA A = X - prom;
+	MatrixA A = X - prom;
 	A = A / sqrt(n-1) ; //Ver bien despues
-	SparseMatrixA M = A.transpose() * A;
+	MatrixA M = A.transpose() * A;
 	cout << "ENTRE3" << endl;
-	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
-	SparseMatrixA V = v.second ;
+	pair<VectorA, MatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
+	MatrixA V = v.second ;
 	X = X.leftCols(components);
 	return V.transpose() * X; 
 }

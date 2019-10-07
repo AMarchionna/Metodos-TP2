@@ -6,7 +6,7 @@
 
 using namespace std;
 
-pair<double, VectorA> power_iteration(const SparseMatrixA& X, unsigned num_iter, double eps)
+pair<double, VectorA> power_iteration(const MatrixA& X, unsigned num_iter, double eps)
 {
     VectorA b = VectorA::Random(X.cols());
     double eigenvalue;
@@ -25,11 +25,11 @@ pair<double, VectorA> power_iteration(const SparseMatrixA& X, unsigned num_iter,
     return make_pair(eigenvalue, b / b.norm());
 }
 
-pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsigned num, unsigned num_iter, double epsilon)
+pair<VectorA, MatrixA > get_first_eigenvalues(const MatrixA& X, unsigned num, unsigned num_iter, double epsilon)
 {
-    SparseMatrixA A(X);
+    MatrixA A(X);
     VectorA eigvalues(num);
-    SparseMatrixA eigvectors(A.rows(), num);
+    MatrixA eigvectors(A.rows(), num);
 	
     /***********************
      * COMPLETAR CODIGO
@@ -41,7 +41,7 @@ pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsi
 		cout <<"ENTRE Y ME DIO " << eig.first << endl;
 		for (int k = 0; k < eig.second.rows(); i++)
 		{
-			eigvectors.insert(i,k) = eig.second[k];
+			eigvectors(i,k) = eig.second[k];
 		}
 		A = A - eig.first * (eig.second * eig.second.transpose()) / (eig.second.transpose() * eig.second);
 	}

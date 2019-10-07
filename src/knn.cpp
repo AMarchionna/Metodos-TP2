@@ -13,7 +13,7 @@ KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 	neighbors = n_neighbors;
 }
 
-void KNNClassifier::fit(SparseMatrixA X, Matrix y)
+void KNNClassifier::fit(MatrixA X, MatrixA y)
 {
 	X_mine = X;
 	y_mine = y;
@@ -63,7 +63,7 @@ int KNNClassifier::predict_row(VectorA v) {
 	return rand() % 2; 
 }
 
-VectorA KNNClassifier::predict(SparseMatrixA X)
+VectorA KNNClassifier::predict(MatrixA X)
 {
     cout << "KKKKK" << endl;
 
