@@ -1,8 +1,8 @@
-# Install script for directory: /home/amarchionna/Desktop/git_repo/Metodos-TP2/pybind11
+# Install script for directory: /home2/clinux01/Downloads/git/pybind11
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/amarchionna/Desktop/git_repo/Metodos-TP2")
+  set(CMAKE_INSTALL_PREFIX "/home2/clinux01/Downloads/git")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

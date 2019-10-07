@@ -305,9 +305,9 @@ CMakeFiles/tp2.dir/src/eigen.cpp.o
  ../eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../eigen/Eigen/src/plugins/ReshapedMethods.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/eigen.cpp
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/eigen.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/types.h
+ /home2/clinux01/Downloads/git/src/eigen.cpp
+ /home2/clinux01/Downloads/git/src/eigen.h
+ /home2/clinux01/Downloads/git/src/types.h
 CMakeFiles/tp2.dir/src/knn.cpp.o
  ../eigen/Eigen/Cholesky
  ../eigen/Eigen/Core
@@ -612,9 +612,9 @@ CMakeFiles/tp2.dir/src/knn.cpp.o
  ../eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../eigen/Eigen/src/plugins/ReshapedMethods.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/knn.cpp
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/knn.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/types.h
+ /home2/clinux01/Downloads/git/src/knn.cpp
+ /home2/clinux01/Downloads/git/src/knn.h
+ /home2/clinux01/Downloads/git/src/types.h
 CMakeFiles/tp2.dir/src/main.cpp.o
  ../eigen/Eigen/Cholesky
  ../eigen/Eigen/Core
@@ -919,10 +919,10 @@ CMakeFiles/tp2.dir/src/main.cpp.o
  ../eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../eigen/Eigen/src/plugins/ReshapedMethods.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/eigen.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/main.cpp
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/pca.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/types.h
+ /home2/clinux01/Downloads/git/src/eigen.h
+ /home2/clinux01/Downloads/git/src/main.cpp
+ /home2/clinux01/Downloads/git/src/pca.h
+ /home2/clinux01/Downloads/git/src/types.h
 CMakeFiles/tp2.dir/src/pca.cpp.o
  ../eigen/Eigen/Cholesky
  ../eigen/Eigen/Core
@@ -1227,7 +1227,7 @@ CMakeFiles/tp2.dir/src/pca.cpp.o
  ../eigen/Eigen/src/plugins/MatrixCwiseBinaryOps.h
  ../eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
  ../eigen/Eigen/src/plugins/ReshapedMethods.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/eigen.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/pca.cpp
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/pca.h
- /home/amarchionna/Desktop/git_repo/Metodos-TP2/src/types.h
+ /home2/clinux01/Downloads/git/src/eigen.h
+ /home2/clinux01/Downloads/git/src/pca.cpp
+ /home2/clinux01/Downloads/git/src/pca.h
+ /home2/clinux01/Downloads/git/src/types.h

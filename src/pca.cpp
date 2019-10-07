@@ -3,7 +3,7 @@
 #include "eigen.h"
 
 using namespace std;
-const int const_iter = 1e3;
+const int const_iter = 1e4;
 const double eps = 1e-9;
 
 
@@ -12,29 +12,34 @@ PCA::PCA(unsigned int n_components)
 {
     components = n_components ;
 }
-void PCA::fit(MatrixA X)
+
+void PCA::fit(SparseMatrixA X)
 {
 	X_mine = X;
 }
 
 
-MatrixA PCA::transform(MatrixA X){
+SparseMatrixA PCA::transform(SparseMatrixA& X){
 	cout << "ENTRE1" << endl;
 	int n = X.cols();
 	VectorA prom = X.row(0);
-	prom = prom.setZero(X.cols());
+	prom.setZero(X.cols());
 	for (int i = 0; i < n; i++)
 	{
-		prom = prom + X.row(i) ;
+		prom = prom + X.row(i).transpose() ;
 	}
 	cout << "ENTRE2" << endl;
 	prom = prom / n ;
-	MatrixA A = X - prom;
-	A = A / sqrt(n-1) ; //Ver bien despues
-	MatrixA M = A.transpose() * A;
+	SparseMatrixA A(X.rows(), X.cols());
+	for(int i=0; i<X.rows(); i++)
+		for(int j=0; j<X.cols(); j++)
+			A.insert(i, j) = X.coeff(i, j) - prom(j); 
+	SparseMatrixA M = A.transpose() * A;
+	M = M / (n-1) ; //Ver bien despues
 	cout << "ENTRE3" << endl;
-	pair<VectorA, MatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
-	MatrixA V = v.second ;
-	X = X.leftCols(components);
-	return V.transpose() * X; 
+	cout << "Calculando " << components << " autovalores..." << endl;
+	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
+	cout << "Sali de buscar los autovalores" << endl;
+	//SparseMatrixA V = v.second ;
+	return A; 
 }

@@ -1,1 +1,1 @@
-/home/amarchionna/Desktop/git_repo/Metodos-TP2/notebooks/sentiment.so
+/home2/clinux01/Downloads/git/notebooks/sentiment.so

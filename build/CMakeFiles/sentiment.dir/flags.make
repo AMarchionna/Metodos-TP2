@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O3 -O3 -DNDEBUG -fPIC -fvisibility=hidden   -flto -fno-fat-l
 
 CXX_DEFINES = -Dsentiment_EXPORTS
 
-CXX_INCLUDES = -I/home/amarchionna/Desktop/git_repo/Metodos-TP2/eigen -I/home/amarchionna/Desktop/git_repo/Metodos-TP2/pybind11/include -I/usr/include/python2.7 
+CXX_INCLUDES = -I/home2/clinux01/Downloads/git/eigen -I/home2/clinux01/Downloads/git/pybind11/include -I/usr/include/python2.7 
 
