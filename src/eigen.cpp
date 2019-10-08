@@ -6,7 +6,7 @@
 
 using namespace std;
 
-pair<double, VectorA> power_iteration(const SparseMatrixA& X, unsigned num_iter, double eps)
+pair<double, VectorA> power_iteration(const MatrixA& X, unsigned num_iter, double eps)
 {
     VectorA b = VectorA::Random(X.cols());
     double eigenvalue;
@@ -25,9 +25,9 @@ pair<double, VectorA> power_iteration(const SparseMatrixA& X, unsigned num_iter,
     return make_pair(eigenvalue, b / b.norm());
 }
 
-pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsigned num, unsigned num_iter, double epsilon)
+pair<VectorA, SparseMatrixA > get_first_eigenvalues(const MatrixA& X, unsigned num, unsigned num_iter, double epsilon)
 {
-    SparseMatrixA A(X);
+    MatrixA A(X);
     VectorA eigvalues(num);
     SparseMatrixA eigvectors(X.rows(), num);
 
@@ -39,16 +39,16 @@ pair<VectorA, SparseMatrixA > get_first_eigenvalues(const SparseMatrixA& X, unsi
     for(int i = 0; i < (int)num; i++){
 		pair<double, VectorA> eig = power_iteration(A, num_iter, epsilon);
 		eigvalues(i) = eig.first;
-		cout <<"ENTRE Y ME DIO " << eig.first << endl;
-		cout << endl << eig.second << endl;
-		cout << endl << eigvectors << endl;
+		//~ cout <<"ENTRE Y ME DIO " << eig.first << endl;
+		//~ cout << endl << eig.second << endl;
+		//~ cout << endl << eigvectors << endl;
 		for (int k = 0; k < eig.second.rows(); k++)
 		{
 			eigvectors.insert(k,i) = eig.second(k);
 		}
-		cout << "No explote en el insert" << endl;
+		//~ cout << "No explote en el insert" << endl;
 		A = A - eig.first * (eig.second * eig.second.transpose()) / (eig.second.transpose() * eig.second);
-		cout << A << endl;
+		//~ cout << A << endl;
 	}
 	
 	/*cout << eigvalues << endl<< endl;

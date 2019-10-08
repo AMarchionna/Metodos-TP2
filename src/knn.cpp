@@ -13,7 +13,7 @@ KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 	neighbors = n_neighbors;
 }
 
-void KNNClassifier::fit(SparseMatrixA X, Matrix y)
+void KNNClassifier::fit(SparseMatrixA X, MatrixA y)
 {
 	X_mine = X;
 	y_mine = y;

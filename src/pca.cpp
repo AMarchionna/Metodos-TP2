@@ -28,20 +28,20 @@ SparseMatrixA PCA::transform(SparseMatrixA& X){
 		prom = prom + X.row(i).transpose() ;
 	}
 	prom = prom / m;
-	cout << prom << endl << endl;
-	SparseMatrixA A(X.rows(), X.cols());
+	//~ cout << prom << endl << endl;
+	MatrixA A(X);
 	for(int i=0; i<X.rows(); i++)
 		for(int j=0; j<X.cols(); j++)
-			A.insert(i, j) = X.coeff(i, j) - prom(j);
-	cout << endl << A << endl << endl; 
-	SparseMatrixA M = A.transpose() * A;
+			A(i, j) = X.coeff(i, j) - prom(j);
+	//~ cout << endl << A << endl << endl; 
+	MatrixA M = A.transpose() * A;
 	M = M / (m-1) ; //Ver bien despues
-	cout << endl << M << endl;
-	cout << "Calculando " << components << " autovalores..." << endl;
+	//~ cout << endl << M << endl;
+	//~ cout << "Calculando " << components << " autovalores..." << endl;
 	pair<VectorA, SparseMatrixA> v = get_first_eigenvalues(M, components, const_iter, eps);
-	cout << "Sali de buscar los autovalores" << endl;
+	//~ cout << "Sali de buscar los autovalores" << endl;
 	SparseMatrixA V = v.second ;
-	cout << X << " " << V << endl;
+	//~ cout << X << " " << V << endl;
 	//Segun el enunciado del tp es X*V
 	//Para mi deberia ser (X-prom)*V+prom o algo asi,
 	//tipo trasladar al origen, aplicar la transformacion, y retrasladar.
