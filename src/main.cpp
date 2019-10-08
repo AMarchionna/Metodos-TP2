@@ -14,38 +14,45 @@ int main(int argc, char** argv){
 
   std::cout << "#Funcionalidades" << std::endl;
 
-  SparseMatrixA X(6,6);
-  VectorA prom = X.row(0);
-  prom(1) = 5; prom(0) = 2; 
+  SparseMatrixA X(5,2);
+  vector<int> valores = {2, 1,
+3, 4,
+5, 0,
+7, 6,
+9, 2,};
+  //~ VectorA prom = X.row(0);
+  //~ prom(1) = 5; prom(0) = 2; 
 
 
-  for (int i = 0; i < X.cols(); ++i)
+  for (int i = 0; i < X.rows(); ++i)
   {
     /* code */
-    for (int j = 0; j < X.rows(); ++j)
+    for (int j = 0; j < X.cols(); ++j)
     {
-      if(j == 1){
-        X.insert(i, j) = 15;
-      } else 
-        X.insert(i,j) = X.coeff(i,j) + i;
+      X.insert(i,j)=valores[i*X.cols()+j];
     }
   }
 
+  //~ cout << X << endl;
+
+  //~ //pair<VectorA, SparseMatrixA >  L = get_first_eigenvalues(X, 2,1000, 1e-9);
+
+  //~ //cout << L.first << endl << endl << L.second << endl << endl;
+
+  //~ cout << X << endl;
+
+  //~ PCA my_PCA = PCA(2);
+
+  //~ my_PCA.fit(X);
+
+  //~ my_PCA.transform(X);
+
   cout << X << endl;
 
-  //pair<VectorA, SparseMatrixA >  L = get_first_eigenvalues(X, 2,1000, 1e-9);
 
-  //cout << L.first << endl << endl << L.second << endl << endl;
-
-  cout << X << endl;
-
-  PCA my_PCA = PCA(2);
-
-  my_PCA.fit(X);
-
-  my_PCA.transform(X);
-
-  cout << X << endl;
+   PCA pca= PCA(1);
+   pca.fit(X);
+   cout << pca.transform(X) << endl;
 
 //https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm
 
