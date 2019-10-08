@@ -45,9 +45,10 @@ int KNNClassifier::predict_row(VectorA v) {
 
 	auto vecinos = VectorA(neighbors);
 
-	for(int i=0; i < (int)neighbors; i++) 
-		vecinos(i) = y_mine.coeff(dist(i),0); // Ese coeff funca?
-
+	for(int i=0; i < (int)neighbors; i++){
+		int s = dist(i);
+		vecinos(i) = y_mine(s); // Ese coeff funca?
+	}
 	// Falta determinar la convencion
 	int ceros = 0; int unos = 0;
 	for(int i=0; i<(int)neighbors; i++){
@@ -63,11 +64,11 @@ int KNNClassifier::predict_row(VectorA v) {
 	return rand() % 2; 
 }
 
-VectorA KNNClassifier::predict(Matrix X)
+VectorA KNNClassifier::predict(SparseMatrixA X)
 {
     // Creamos vector columna a devolver
     auto ret = VectorA(X.rows());
-
+	Matrix Y = Matrix(X);
     for (unsigned k = 0; k < X.rows(); ++k)
     {
     	auto v = VectorA(X.row(k));

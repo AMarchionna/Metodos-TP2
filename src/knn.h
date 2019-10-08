@@ -13,13 +13,13 @@ public:
 
     int predict_row(VectorA v);
 
-    VectorA predict(Matrix X);
+    VectorA predict(SparseMatrixA X);
 private:
 
 	unsigned int neighbors;
 
 	Matrix X_mine;
 
-	Matrix y_mine;
+	VectorA y_mine;
 
 };
