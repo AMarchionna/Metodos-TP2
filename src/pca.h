@@ -6,12 +6,12 @@ class PCA {
 public:
     PCA(unsigned int n_components);
 
-    void fit(SparseMatrixA X);
+    void fit(Matrix X);
 
-    SparseMatrixA transform(SparseMatrixA& X);
+    Matrix transform(Matrix& X);
 private:
 
-	SparseMatrixA X_mine;
+	Matrix X_mine;
 
 	int components;
 };

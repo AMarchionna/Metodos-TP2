@@ -7,19 +7,19 @@ class KNNClassifier {
 public:
     KNNClassifier(unsigned int n_neighbors);
 
-    void fit(SparseMatrixA X, MatrixA y);
+    void fit(Matrix X, Matrix y);
 
     VectorA distance_to_row(VectorA v);
 
     int predict_row(VectorA v);
 
-    VectorA predict(SparseMatrixA X);
+    VectorA predict(Matrix X);
 private:
 
 	unsigned int neighbors;
 
-	SparseMatrixA X_mine;
+	Matrix X_mine;
 
-	MatrixA y_mine;
+	Matrix y_mine;
 
 };

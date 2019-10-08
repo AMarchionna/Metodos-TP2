@@ -13,7 +13,7 @@ KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 	neighbors = n_neighbors;
 }
 
-void KNNClassifier::fit(SparseMatrixA X, MatrixA y)
+void KNNClassifier::fit(Matrix X, Matrix y)
 {
 	X_mine = X;
 	y_mine = y;
@@ -63,7 +63,7 @@ int KNNClassifier::predict_row(VectorA v) {
 	return rand() % 2; 
 }
 
-VectorA KNNClassifier::predict(SparseMatrixA X)
+VectorA KNNClassifier::predict(Matrix X)
 {
     // Creamos vector columna a devolver
     auto ret = VectorA(X.rows());
