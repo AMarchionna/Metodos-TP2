@@ -46,15 +46,15 @@ int KNNClassifier::predict_row(VectorA v) {
 	auto vecinos = VectorA(neighbors);
 
 	for(int i=0; i < (int)neighbors; i++) 
-		vecinos(i) = y_mine.coeff(dist(i), 0); // Ese coeff funca?
+		vecinos(i) = y_mine.coeff(dist(i),0); // Ese coeff funca?
 
 	// Falta determinar la convencion
 	int ceros = 0; int unos = 0;
 	for(int i=0; i<(int)neighbors; i++){
 		if(vecinos(i) == 0) ceros ++;
-		else unos ++;
+		else if (vecinos(i) == 1) unos ++;
 	}
-
+	assert(unos+ceros==neighbors);
 	if(ceros > unos)
 		return 0;
 	else if (unos < ceros)

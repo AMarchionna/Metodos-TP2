@@ -16,10 +16,6 @@ PCA::PCA(unsigned int n_components)
 void PCA::fit(Matrix X)
 {
 	X_mine = X;
-}
-
-
-Matrix PCA::transform(Matrix& X){
 	int m = X.rows();
 	VectorA prom = X.row(0);
 	prom = prom.setZero(X.cols());
@@ -39,10 +35,15 @@ Matrix PCA::transform(Matrix& X){
 	//cout << M << endl;
 	//cout << "Calculando " << components << " autovalores..." << endl;
 	pair<VectorA, Matrix> v = get_first_eigenvalues(M, components, const_iter, eps);
-	Matrix V = v.second ;
+	V_mine = v.second ;
+}
+
+
+Matrix PCA::transform(SparseMatrixA X){
+	
 	//cout << A << endl << V << endl;
 	//Segun el enunciado del tp es X*V
 	//Para mi deberia ser (X-prom)*V+prom o algo asi -> Queda como decis sin el +prom. Para mi que esta bien asi. 
 	//tipo trasladar al origen, aplicar la transformacion, y retrasladar. -> Retrasladar de baja
-	return A*V;  /* Hacemos la transformacion con A trasladada al origen */ 
+	return X*V_mine;  /* Hacemos la transformacion con A trasladada al origen */ 
 }

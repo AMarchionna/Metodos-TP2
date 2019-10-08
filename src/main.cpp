@@ -43,7 +43,7 @@ int main(int argc, char** argv){
 
    PCA pca= PCA(2);
    pca.fit(X);
-   cout << pca.transform(X) << endl;
+   //~ cout << pca.transform(X) << endl;
 
 //https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm
 

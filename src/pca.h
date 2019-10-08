@@ -8,10 +8,12 @@ public:
 
     void fit(Matrix X);
 
-    Matrix transform(Matrix& X);
+    Matrix transform(SparseMatrixA X);
 private:
 
 	Matrix X_mine;
-
+	
+	Matrix V_mine;
+	
 	int components;
 };
