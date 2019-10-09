@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include "knn.h"
 #include "pca.h"
 #include "eigen.h"
 
@@ -12,17 +13,44 @@ int main(int argc, char** argv){
 
   std::cout << "Hola mundo!" << std::endl;
 
-  Matrix X(5,2);
-  vector<int> valores = {2,1,3,4,5,0,7,6,9,2};
+  /*Matrix X(3,3);
+  Matrix Y(3,1);
+  SparseMatrixA Z(3,3);
+  vector<int> valores_X = {1,1,1,2,2,2,3,3,3};
+  vector<int> valores_Y = {0, 1, 1};
+  vector<float> valores_Z = {2.7, 2.7, 2.7, 2.1, 2.1, 2.1, 1, 1, 1};
   //~ VectorA prom = X.ro,w(0);
   //~ prom(1) = 5; prom(0) = 2; 
 
 
   for (int i = 0; i < X.rows(); ++i){
     for (int j = 0; j < X.cols(); ++j){
-      X(i,j)=valores[i*X.cols()+j];
+      X(i,j)=valores_X[i*X.cols()+j];
     }
   }
+
+  for (int i = 0; i < Y.rows(); ++i){
+    for (int j = 0; j < Y.cols(); ++j){
+      Y(i,j)=valores_Y[i*Y.cols()+j];
+    }
+  }
+
+  for (int i = 0; i < Z.rows(); ++i){
+    for (int j = 0; j < Z.cols(); ++j){
+      Z.insert(i,j)=valores_Z[i*Z.cols()+j];
+    }
+  }
+
+  cout << Z << endl;
+
+  KNNClassifier K = KNNClassifier(2);
+  K.fit(X,Y);
+
+  VectorA solution = K.predict(Z);
+
+  cout << endl << solution << endl;*/
+
+
 
   //~ cout << X << endl;
 
@@ -38,11 +66,11 @@ int main(int argc, char** argv){
 
   //~ my_PCA.transform(X);
 
-  cout << X << endl << endl;
+  /*cout << X << endl << endl;
 
 
    PCA pca= PCA(2);
-   pca.fit(X);
+   pca.fit(X);*/
    //~ cout << pca.transform(X) << endl;
 
 //https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc552.htm

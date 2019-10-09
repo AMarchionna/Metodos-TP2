@@ -10,10 +10,12 @@ using namespace std;
 
 KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 {
+	cout << "Clasificador inicializado con k=" << n_neighbors << "..." << endl;
+	cout << "NUEVA" << endl;
 	neighbors = n_neighbors;
 }
 
-void KNNClassifier::fit(Matrix X, Matrix y)
+void KNNClassifier::fit(SparseMatrixA X, Matrix y)
 {
 	X_mine = X;
 	y_mine = y;
@@ -56,10 +58,12 @@ int KNNClassifier::predict_row(VectorA v) {
 		else if (vecinos(i) == 1) unos ++;
 	}
 	assert(unos+ceros==neighbors);
-	if(ceros > unos)
+	if(ceros > unos){
 		return 0;
-	else if (unos < ceros)
+	}
+	if (unos > ceros){
 		return 1;
+	}
 	srand(time(NULL));
 	return rand() % 2; 
 }
@@ -69,6 +73,7 @@ VectorA KNNClassifier::predict(SparseMatrixA X)
     // Creamos vector columna a devolver
     auto ret = VectorA(X.rows());
 	Matrix Y = Matrix(X);
+	cout << "Calculando predicciones..." << endl;
     for (unsigned k = 0; k < X.rows(); ++k)
     {
     	auto v = VectorA(X.row(k));

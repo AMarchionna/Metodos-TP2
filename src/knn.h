@@ -1,4 +1,4 @@
-#pragma once
+#pragma oncehttps://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.astype.html
 
 #include "types.h"
 
@@ -7,7 +7,7 @@ class KNNClassifier {
 public:
     KNNClassifier(unsigned int n_neighbors);
 
-    void fit(Matrix X, Matrix y);
+    void fit(SparseMatrixA X, Matrix y);
 
     VectorA distance_to_row(VectorA v);
 

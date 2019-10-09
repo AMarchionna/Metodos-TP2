@@ -1,8 +1,8 @@
-# Install script for directory: /home/agustin/git_repo/Metodos-TP2
+# Install script for directory: /home2/clinux01/Downloads/Ahre
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/agustin/git_repo/Metodos-TP2")
+  set(CMAKE_INSTALL_PREFIX "/home2/clinux01/Downloads/Ahre")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,32 +38,32 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so"
+         FILE "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so"
          RPATH "")
   endif()
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so")
+   "/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/agustin/git_repo/Metodos-TP2/notebooks" TYPE MODULE FILES "/home/agustin/git_repo/Metodos-TP2/build/sentiment.cpython-37m-x86_64-linux-gnu.so")
-  if(EXISTS "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so")
+file(INSTALL DESTINATION "/home2/clinux01/Downloads/Ahre/notebooks" TYPE MODULE FILES "/home2/clinux01/Downloads/Ahre/build/sentiment.cpython-36m-x86_64-linux-gnu.so")
+  if(EXISTS "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home/agustin/git_repo/Metodos-TP2/notebooks/sentiment.cpython-37m-x86_64-linux-gnu.so")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}/home2/clinux01/Downloads/Ahre/notebooks/sentiment.cpython-36m-x86_64-linux-gnu.so")
     endif()
   endif()
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/agustin/git_repo/Metodos-TP2/build/pybind11/cmake_install.cmake")
+  include("/home2/clinux01/Downloads/Ahre/build/pybind11/cmake_install.cmake")
 
 endif()
 
@@ -75,5 +75,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/agustin/git_repo/Metodos-TP2/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home2/clinux01/Downloads/Ahre/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
