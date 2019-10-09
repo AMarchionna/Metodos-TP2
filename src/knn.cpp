@@ -24,11 +24,11 @@ void KNNClassifier::fit(SparseMatrixA X, Matrix y)
 VectorA KNNClassifier::distance_to_row(VectorA v){
 
 	auto V = VectorA(X_mine.rows());
-	VectorA vn = v.normalized();
+
 	for(int i=0; i<X_mine.rows(); i++) {
-		VectorA xi = X_mine.row(i).normalized();
-  		VectorA prod = xi.transpose()*vn;
-  		V(i) = -prod(0);
+		 
+  		
+  		V(i) = (X_mine.row(i)-v.transpose()).norm();
  	}
 
  	vector<pair<double,int> > index(X_mine.rows());

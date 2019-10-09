@@ -6,6 +6,7 @@
 #include "knn.h"
 #include "pca.h"
 #include "eigen.h"
+#include <chrono>
 
 using namespace std;
 
@@ -13,21 +14,24 @@ int main(int argc, char** argv){
 
   std::cout << "Hola mundo!" << std::endl;
   
-  Matrix X(3,3);
-  X(2,1)=2;
-  X(1,1)=4;
-  X(1,0)=2;
-  X(1,2)=-10;
-  X(0,2)=5;
-  cout << X << endl;
-  VectorA v = X.row(1).normalized();
-  VectorA V(3);
-  V(0)=-2;V(1)=5;V(2)=7;VectorA w=V.normalized();
-  cout << X << endl << endl << v << endl << endl;
-  cout << w << endl << endl;
-  cout << v.transpose() * w << endl; 
-  VectorA prom = v.transpose() * w;
-  cout << prom(0) << endl << endl;
+  for(int i = 100; i <= 1000; i+=100){
+	  cout << endl << "TAMANO " << i << endl;
+	  for (int k = 0; k < 10; k++)
+	  {
+		  Matrix A = Matrix::Random(i,i);
+		  auto t1 = std::chrono::high_resolution_clock::now();
+		  get_first_eigenvalues(A,20); 
+		  auto t2 = std::chrono::high_resolution_clock::now();
+		  auto duration = std::chrono::duration_cast<std::chrono::milliseconds>( t2 - t1 ).count();
+		      
+          cout << duration << endl;
+	  }
+	  cout << endl << endl;
+  }
+  
+  Matrix X(2,2);
+  X(0,0) = 2, X(0,1)=3,X(1,0)=3,X(1,1)=2;
+  get_first_eigenvalues(X,2,10000,1e-8);
   /*Matrix X(3,3);
   Matrix Y(3,1);
   SparseMatrixA Z(3,3);
