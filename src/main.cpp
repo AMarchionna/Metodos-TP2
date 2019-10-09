@@ -12,7 +12,22 @@ using namespace std;
 int main(int argc, char** argv){
 
   std::cout << "Hola mundo!" << std::endl;
-
+  
+  Matrix X(3,3);
+  X(2,1)=2;
+  X(1,1)=4;
+  X(1,0)=-1;
+  X(1,2)=5;
+  X(0,2)=5;
+  cout << X << endl;
+  VectorA v = X.row(1).normalized();
+  VectorA V(3);
+  V(0)=-2;V(1)=5;V(2)=7;V=V.normalized();
+  cout << X << endl << endl << v << endl << endl;
+  cout << V << endl << endl;
+  cout << v.transpose() * V << endl; 
+  VectorA prom = v.transpose() * V;
+  cout << prom(0) << endl << endl;
   /*Matrix X(3,3);
   Matrix Y(3,1);
   SparseMatrixA Z(3,3);
