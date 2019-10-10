@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/agustin/git_repo/Metodos-TP2/src/eigen.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/eigen.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/knn.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/knn.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/pca.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/pca.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/sentiment.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/sentiment.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/eigen.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/eigen.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/knn.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/knn.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/pca.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/pca.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/sentiment.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/sentiment.dir/src/sentiment.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -15,7 +15,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../eigen"
   "../pybind11/include"
-  "/usr/include/python3.7m"
+  "/usr/include/python3.6m"
   )
 
 # Targets to which this target links.

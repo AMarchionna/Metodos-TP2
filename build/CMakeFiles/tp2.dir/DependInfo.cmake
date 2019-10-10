@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/agustin/git_repo/Metodos-TP2/src/eigen.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/tp2.dir/src/eigen.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/knn.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/tp2.dir/src/knn.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/main.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/tp2.dir/src/main.cpp.o"
-  "/home/agustin/git_repo/Metodos-TP2/src/pca.cpp" "/home/agustin/git_repo/Metodos-TP2/build/CMakeFiles/tp2.dir/src/pca.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/eigen.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/tp2.dir/src/eigen.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/knn.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/tp2.dir/src/knn.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/main.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/tp2.dir/src/main.cpp.o"
+  "/home2/clinux01/Metodos-TP2/src/pca.cpp" "/home2/clinux01/Metodos-TP2/build/CMakeFiles/tp2.dir/src/pca.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

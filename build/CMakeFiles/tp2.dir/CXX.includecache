@@ -1550,7 +1550,7 @@ IndexedViewMethods.h
 ReshapedMethods.h
 ../eigen/Eigen/src/plugins/ReshapedMethods.h
 
-/home/agustin/git_repo/Metodos-TP2/src/eigen.cpp
+/home2/clinux01/Metodos-TP2/src/eigen.cpp
 algorithm
 -
 chrono
@@ -1558,13 +1558,13 @@ chrono
 iostream
 -
 eigen.h
-/home/agustin/git_repo/Metodos-TP2/src/eigen.h
+/home2/clinux01/Metodos-TP2/src/eigen.h
 
-/home/agustin/git_repo/Metodos-TP2/src/eigen.h
+/home2/clinux01/Metodos-TP2/src/eigen.h
 types.h
-/home/agustin/git_repo/Metodos-TP2/src/types.h
+/home2/clinux01/Metodos-TP2/src/types.h
 
-/home/agustin/git_repo/Metodos-TP2/src/knn.cpp
+/home2/clinux01/Metodos-TP2/src/knn.cpp
 algorithm
 -
 iostream
@@ -1572,37 +1572,39 @@ iostream
 vector
 -
 knn.h
-/home/agustin/git_repo/Metodos-TP2/src/knn.h
+/home2/clinux01/Metodos-TP2/src/knn.h
 time.h
-/home/agustin/git_repo/Metodos-TP2/src/time.h
+/home2/clinux01/Metodos-TP2/src/time.h
 
-/home/agustin/git_repo/Metodos-TP2/src/knn.h
+/home2/clinux01/Metodos-TP2/src/knn.h
 types.h
-/home/agustin/git_repo/Metodos-TP2/src/types.h
+/home2/clinux01/Metodos-TP2/src/types.h
 
-/home/agustin/git_repo/Metodos-TP2/src/main.cpp
+/home2/clinux01/Metodos-TP2/src/main.cpp
 iostream
 -
 knn.h
-/home/agustin/git_repo/Metodos-TP2/src/knn.h
+/home2/clinux01/Metodos-TP2/src/knn.h
 pca.h
-/home/agustin/git_repo/Metodos-TP2/src/pca.h
+/home2/clinux01/Metodos-TP2/src/pca.h
 eigen.h
-/home/agustin/git_repo/Metodos-TP2/src/eigen.h
+/home2/clinux01/Metodos-TP2/src/eigen.h
+chrono
+-
 
-/home/agustin/git_repo/Metodos-TP2/src/pca.cpp
+/home2/clinux01/Metodos-TP2/src/pca.cpp
 iostream
 -
 pca.h
-/home/agustin/git_repo/Metodos-TP2/src/pca.h
+/home2/clinux01/Metodos-TP2/src/pca.h
 eigen.h
-/home/agustin/git_repo/Metodos-TP2/src/eigen.h
+/home2/clinux01/Metodos-TP2/src/eigen.h
 
-/home/agustin/git_repo/Metodos-TP2/src/pca.h
+/home2/clinux01/Metodos-TP2/src/pca.h
 types.h
-/home/agustin/git_repo/Metodos-TP2/src/types.h
+/home2/clinux01/Metodos-TP2/src/types.h
 
-/home/agustin/git_repo/Metodos-TP2/src/types.h
+/home2/clinux01/Metodos-TP2/src/types.h
 Eigen/Sparse
 -
 Eigen/Dense

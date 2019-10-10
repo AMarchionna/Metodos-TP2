@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC  -Wall -O3 -O3 -DNDEBUG  -shared  -o sentiment.cpython-37m-x86_64-linux-gnu.so CMakeFiles/sentiment.dir/src/sentiment.cpp.o CMakeFiles/sentiment.dir/src/knn.cpp.o CMakeFiles/sentiment.dir/src/pca.cpp.o CMakeFiles/sentiment.dir/src/eigen.cpp.o -flto 
+/usr/bin/c++ -fPIC  -Wall -O3 -O3 -DNDEBUG  -shared  -o sentiment.cpython-36m-x86_64-linux-gnu.so CMakeFiles/sentiment.dir/src/sentiment.cpp.o CMakeFiles/sentiment.dir/src/knn.cpp.o CMakeFiles/sentiment.dir/src/pca.cpp.o CMakeFiles/sentiment.dir/src/eigen.cpp.o -flto 

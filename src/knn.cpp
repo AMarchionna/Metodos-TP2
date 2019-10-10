@@ -11,7 +11,6 @@ using namespace std;
 KNNClassifier::KNNClassifier(unsigned int n_neighbors)
 {
 	cout << "Clasificador inicializado con k=" << n_neighbors << "..." << endl;
-	cout << "NUEVA" << endl;
 	neighbors = n_neighbors;
 }
 
@@ -51,9 +50,8 @@ int KNNClassifier::predict_row(VectorA v) {
 
 	for(int i=0; i < (int)neighbors; i++){
 		int s = dist(i);
-		vecinos(i) = y_mine(s); // Ese coeff funca?
+		vecinos(i) = y_mine(s);
 	}
-	// Falta determinar la convencion
 	int ceros = 0; int unos = 0;
 	for(int i=0; i<(int)neighbors; i++){
 		if(vecinos(i) == 0) ceros ++;
