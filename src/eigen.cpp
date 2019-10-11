@@ -42,7 +42,6 @@ pair<VectorA, Matrix > get_first_eigenvalues(const Matrix& X, unsigned num, unsi
     for(int i = 0; i < (int)num; i++){
 		pair<double, VectorA> eig = power_iteration(A, num_iter, epsilon);
 		eigvalues(i) = eig.first;
-		//~ power_iteration_test(A, num_iter, epsilon,eig.first);
 		for (int k = 0; k < eig.second.rows(); k++){
 			eigvectors(k,i) = eig.second(k);
 		}

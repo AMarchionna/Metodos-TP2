@@ -168,7 +168,7 @@ tp2_pybind: CMakeFiles/tp2_pybind.dir/src/knn.cpp.o
 tp2_pybind: CMakeFiles/tp2_pybind.dir/src/pca.cpp.o
 tp2_pybind: CMakeFiles/tp2_pybind.dir/src/eigen.cpp.o
 tp2_pybind: CMakeFiles/tp2_pybind.dir/build.make
-tp2_pybind: /usr/lib/x86_64-linux-gnu/libpython3.6m.so
+tp2_pybind: /opt/anaconda3/lib/libpython3.7m.so
 tp2_pybind: CMakeFiles/tp2_pybind.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home2/clinux01/Metodos-TP2/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable tp2_pybind"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/tp2_pybind.dir/link.txt --verbose=$(VERBOSE)
